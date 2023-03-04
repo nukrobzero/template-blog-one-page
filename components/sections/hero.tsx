@@ -31,11 +31,12 @@ export default function HeroSection() {
                 ></span>
               </h1>
             </div>
-            <div className="flex justify-center">
-              <img
-                src="https://source.unsplash.com/random"
+            <div className="flex justify-center mx-auto rounded-3xl max-h-full max-w-md object-cover">
+              <Image
+                src="https://cdn.pixabay.com/photo/2014/10/25/20/27/rubber-bands-503028_960_720.jpg"
                 alt="Card"
-                className="mx-auto rounded-3xl max-h-full max-w-md object-cover"
+                width={600}
+                height={400}
               />
             </div>
           </div>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useState, useRef } from "react";
 
 export default function WorkSection({ repos }: any) {
@@ -28,11 +29,14 @@ export default function WorkSection({ repos }: any) {
                     key={repo.id}
                     className="bg-white rounded-lg shadow-lg overflow-hidden"
                   >
-                    <img
-                      className="w-full h-48 object-cover"
-                      src="https://source.unsplash.com/random"
-                      alt="Card"
-                    />
+                    <div className="w-full h-48 object-cover">
+                      <Image
+                        src="https://cdn.pixabay.com/photo/2014/10/25/20/27/rubber-bands-503028_960_720.jpg"
+                        alt="Card"
+                        width={300}
+                        height={192}
+                      />
+                    </div>
                     <div className="p-6">
                       <a
                         href={repo.html_url}

@@ -30,8 +30,8 @@ export default function Home({ repos }: Prop) {
 }
 
 async function getRepos() {
-  const res = await fetch(`http://localhost:3000/api/getRepo`);
-  return res.json();
+  const res = await axios.post(`${process.env.HOST_URL}/api/getRepo`);
+  return res.data;
 }
 
 export const getStaticProps: GetStaticProps = async () => {
