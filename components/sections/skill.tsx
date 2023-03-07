@@ -2,10 +2,10 @@ export default function Skill() {
   return (
     <>
       <section id="skill" className=" bg-[#9FE2BF] h-screen">
-        <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8 h-full">
+        <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
           <div className="flex flex-col justify-center h-screen">
             <h1 className="text-4xl md:text-6xl text-center mb-10">Skill</h1>
-            <p className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 content-center justify-items-center">
+            <p className="grid grid-cols-3 md:grid-cols-3 md:gap-10 lg:grid-cols-5 gap-5 sm:gap-10 content-center justify-items-center">
               <a
                 href="https://getbootstrap.com"
                 target="_blank"

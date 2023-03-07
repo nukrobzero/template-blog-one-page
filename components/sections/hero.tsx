@@ -31,7 +31,7 @@ export default function HeroSection() {
                 ></span>
               </h1>
             </div>
-            <div className="container flex justify-center w-[400px] h-[500px] lg:w-[500px] lg:h-[400px]">
+            <div className="container flex justify-center w-[300px] h-[300px] md:w-[500px] md:h-[500px] lg:w-[500px] lg:h-[400px]">
               <Image
                 src="https://source.unsplash.com/random"
                 alt="Card"
