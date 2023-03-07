@@ -39,7 +39,7 @@ export default function ContactSection() {
           <div className="flex flex-col justify-center h-screen">
             <h1 className="text-4xl text-center mb-8 md:mb-12">Contacts</h1>
             {resData !== "" ? (
-              <div>
+              <div className="flex flex-col text-center">
                 <p className=" text-xl font-bold">
                   <span className=" bg-cyan-600 text-white rounded-md p-[2px]">
                     Thanks for contacting us!

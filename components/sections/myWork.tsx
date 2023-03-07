@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 import axios from "axios";
-import { useState, useRef, useEffect } from "react";
-=======
 import Image from "next/image";
-import { useState, useRef } from "react";
->>>>>>> 6b708cfc45ce2fa455a4d7f5481d4fd616e350a5
+import { useState, useRef, useEffect } from "react";
 
 export default function WorkSection() {
   const [repos, setRepos] = useState([]);
@@ -44,12 +40,13 @@ export default function WorkSection() {
                     key={repo.id}
                     className="bg-white rounded-lg shadow-lg overflow-hidden"
                   >
-                    <div className="w-full h-48 object-cover">
+                    <div className="w-full max-h-[200px] object-cover">
                       <Image
-                        src="https://cdn.pixabay.com/photo/2014/10/25/20/27/rubber-bands-503028_960_720.jpg"
+                        src="https://source.unsplash.com/random"
                         alt="Card"
-                        width={300}
-                        height={192}
+                        width={1920}
+                        height={1080}
+                        className="max-h-[200px]"
                       />
                     </div>
                     <div className="p-6">
