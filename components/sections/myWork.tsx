@@ -1,8 +1,19 @@
-import { useState, useRef } from "react";
+import axios from "axios";
+import { useState, useRef, useEffect } from "react";
 
-export default function WorkSection({ repos }: any) {
+export default function WorkSection() {
+  const [repos, setRepos] = useState([]);
   const [numPosts, setNumPosts] = useState(8);
   const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await axios.post("api/getRepo");
+      const sortedRepos = res.data.sort((a: any, b: any) => b.id - a.id);
+      setRepos(sortedRepos);
+    };
+    fetchData();
+  }, []);
 
   const handleShowMore = () => {
     setNumPosts(numPosts + 8);

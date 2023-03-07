@@ -12,7 +12,8 @@ export default async function GetRepo(
       },
     });
 
-    res.status(200).json(resData.data);
+    res.json(resData.data);
+    
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Something went wrong!" });

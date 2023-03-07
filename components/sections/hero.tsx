@@ -21,8 +21,8 @@ export default function HeroSection() {
     <>
       <section className="bg-indigo-500 h-screen" id="hero">
         <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8 h-full">
-          <div className="flex flex-col justify-center items-center h-full md:flex-row">
-            <div className="container mx-auto text-center md:text-center">
+          <div className="container flex flex-col justify-center items-center h-full md:flex-row">
+            <div className="container text-center md:text-center sm: mb-10">
               <h1 className="text-4xl md:text-6xl">
                 Good
                 <span
@@ -31,11 +31,13 @@ export default function HeroSection() {
                 ></span>
               </h1>
             </div>
-            <div className="flex justify-center">
-              <img
+            <div className="container flex justify-center w-[400px] h-[500px] lg:w-[500px] lg:h-[400px]">
+              <Image
                 src="https://source.unsplash.com/random"
                 alt="Card"
-                className="mx-auto rounded-3xl max-h-full max-w-md object-cover"
+                width={1920}
+                height={1080}
+                className="rounded-[50px]"
               />
             </div>
           </div>
