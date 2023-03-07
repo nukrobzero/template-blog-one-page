@@ -46,10 +46,15 @@ export default function ContactSection() {
                   </span>{" "}
                   We will be in touch with you shortly.
                 </p>
-                <p className="text-xs mt-[10px]">Message will be send to me by Line Notify.</p>
+                <p className="text-xs mt-[10px]">
+                  Message will be send to me by Line Notify.
+                </p>
               </div>
             ) : (
-              <form className="mx-auto max-w-md w-96" onSubmit={handleSubmit}>
+              <form
+                className="md:mx-auto md:max-w-md md:w-96 lg:mx-auto lg:max-w-md lg:w-96"
+                onSubmit={handleSubmit}
+              >
                 <div className="mb-4">
                   <label
                     htmlFor="name"
