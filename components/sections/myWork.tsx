@@ -1,5 +1,6 @@
 import axios from "axios";
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 
 export default function WorkSection() {
@@ -25,50 +26,50 @@ export default function WorkSection() {
 
   return (
     <>
-      <section className="bg-amber-300 min-h-screen" id="work" ref={sectionRef}>
-        <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8 h-full">
+      <section className="mt-36" id="work" ref={sectionRef}>
+        <div className="max-w-7xl mx-auto p-4 h-full">
           <div className="flex flex-col justify-center">
-            <div className="container mx-auto">
-              <h1 className="text-4xl text-center mt-20">
+            <div className="container mx-auto my-8">
+              <h1 className="text-4xl font-bold text-center bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text">
                 My Repositories on Github
               </h1>
             </div>
-            <div className="container mx-auto">
-              <ul className="grid grid-cols-2 md:grid-cols-4 text-2xl text-center gap-5 mt-20 mb-20">
+            <div className="container mx-auto my-8">
+              <ul className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mx-6 md:mx-0">
                 {repos.slice(0, numPosts).map((repo: any) => (
-                  <li
-                    key={repo.id}
-                    className="bg-white rounded-lg shadow-lg overflow-hidden"
-                  >
-                    <div className="w-full max-h-[200px] object-cover">
-                      <Image
-                        src="https://source.unsplash.com/random"
-                        alt="Card"
-                        width={1920}
-                        height={1080}
-                        className="max-h-[200px]"
-                      />
-                    </div>
-                    <div className="p-6">
-                      <a
-                        href={repo.html_url}
-                        target="_blank"
-                        className="font-bold text-2xl mb-2 hover:text-blue-500"
-                      >
-                        {repo.name}
-                      </a>
-                      <p className="text-gray-700 text-base">
-                        {repo.description}
-                      </p>
-                      <p className="text-xs mt-2">
-                        Created Date:{" "}
-                        {new Date(repo.created_at).toLocaleDateString("en-GB", {
-                          day: "numeric",
-                          month: "numeric",
-                          year: "2-digit",
-                        })}
-                      </p>
-                    </div>
+                  <li key={repo.id} className="group">
+                    <Link href={repo.html_url} target="_blank">
+                      <div className="md:h-[400px] bg-white text-black hover:shadow-xl rounded-md">
+                        <figure className="overflow-hidden bg-cover bg-no-repeat">
+                          <Image
+                            src="https://source.unsplash.com/random"
+                            width={400}
+                            height={300}
+                            alt="Card"
+                            layout="responsive"
+                            style={{ objectFit: "cover" }}
+                            className="!h-[200px] transform hover:scale-110 transition duration-500 ease-in-out group-hover:scale-110"
+                          />
+                        </figure>
+                        <div className="p-4 h-52">
+                          <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 bg-[length:0%_3px] bg-no-repeat bg-left-bottom group-hover:bg-[length:100%_4px] transition-all duration-500">
+                            {repo.name}
+                          </span>
+                          <p>{repo.description}</p>
+                          <p className="text-xs pt-6">
+                            Created Date:
+                            {new Date(repo.created_at).toLocaleDateString(
+                              "en-GB",
+                              {
+                                day: "numeric",
+                                month: "numeric",
+                                year: "2-digit",
+                              }
+                            )}
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
                   </li>
                 ))}
               </ul>

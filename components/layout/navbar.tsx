@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -10,7 +11,15 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <Link href="/" className="text-white font-bold text-xl">
-              Logo
+              <Image
+                src={`https://img.lovepik.com/element/40120/1491.png_860.png`}
+                width={300}
+                height={300}
+                alt="logo"
+                layout="responsive"
+                style={{ objectFit: "cover" }}
+                className="!w-[50px] rounded-full"
+              />
             </Link>
           </div>
           <div className="flex sm:hidden">
@@ -90,24 +99,28 @@ export default function Navbar() {
           <div className="px-2 pt-2 pb-3 space-y-1">
             <Link
               href="/#about"
+              onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
             >
               About
             </Link>
             <Link
               href="/#skill"
+              onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
             >
               Skill
             </Link>
             <Link
               href="/#work"
+              onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
             >
               Projects
             </Link>
             <Link
               href="/#contact"
+              onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
             >
               Contact

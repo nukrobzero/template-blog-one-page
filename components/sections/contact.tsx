@@ -4,7 +4,7 @@ import { useState } from "react";
 export default function ContactSection() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [tel, setTel] = useState("");
+  const [tel, setTel] = useState<string>("");
   const [message, setMessage] = useState("");
   const [resData, setResData] = useState("");
 
@@ -34,16 +34,18 @@ export default function ContactSection() {
 
   return (
     <>
-      <section className="bg-lime-400 h-screen" id="contact">
-        <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8 h-full">
-          <div className="flex flex-col justify-center h-screen">
-            <h1 className="text-4xl text-center mb-8 md:mb-12">Contacts</h1>
+      <section className="my-24" id="contact">
+        <div className="max-w-7xl mx-auto p-4 h-full">
+          <div className="flex flex-col justify-center max-w-2xl mx-auto m-4">
+            <h1 className="text-4xl text-center font-bold mb-8 md:mb-12 bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text">
+              Contacts
+            </h1>
             {resData !== "" ? (
-              <div className="flex flex-col text-center">
+              <div className="flex flex-col text-center text-white">
                 <p className=" text-xl font-bold">
-                  <span className=" bg-cyan-600 text-white rounded-md p-[2px]">
+                  <span className=" bg-cyan-600 text-white rounded-md p-[2px] mr-2">
                     Thanks for contacting us!
-                  </span>{" "}
+                  </span>
                   We will be in touch with you shortly.
                 </p>
                 <p className="text-xs mt-[10px]">
@@ -52,7 +54,7 @@ export default function ContactSection() {
               </div>
             ) : (
               <form
-                className="md:mx-auto md:max-w-md md:w-96 lg:mx-auto lg:max-w-md lg:w-96"
+                className="bg-gray-50 p-10 rounded-md"
                 onSubmit={handleSubmit}
               >
                 <div className="mb-4">
@@ -65,9 +67,10 @@ export default function ContactSection() {
                   <input
                     type="text"
                     id="name"
-                    className="block w-full bg-gray-100 border-transparent rounded-lg py-3 px-4 placeholder-gray-400 text-gray-900 focus:outline-none focus:bg-white focus:ring-0"
+                    className="w-full text-black bg-white border border-gray-300 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-[#0083CA] focus:border-transparent"
                     placeholder="Your name"
                     value={name}
+                    required
                     onChange={({ target }) => setName(target?.value)}
                   />
                 </div>
@@ -81,9 +84,10 @@ export default function ContactSection() {
                   <input
                     type="email"
                     id="email"
-                    className="block w-full bg-gray-100 border-transparent rounded-lg py-3 px-4 placeholder-gray-400 text-gray-900 focus:outline-none focus:bg-white focus:ring-0"
+                    className="w-full text-black bg-white border border-gray-300 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-[#0083CA] focus:border-transparent"
                     placeholder="Your email address"
                     value={email}
+                    required
                     onChange={({ target }) => setEmail(target?.value)}
                   />
                 </div>
@@ -94,13 +98,15 @@ export default function ContactSection() {
                   >
                     Phone
                   </label>
+
                   <input
-                    type="tel"
+                    type="text"
                     id="phone"
-                    className="block w-full bg-gray-100 border-transparent rounded-lg py-3 px-4 placeholder-gray-400 text-gray-900 focus:outline-none focus:bg-white focus:ring-0"
-                    placeholder="Your phone number"
+                    className="w-full text-black bg-white border border-gray-300 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-[#0083CA] focus:border-transparent"
+                    placeholder="081-234-5678"
+                    required
                     value={tel}
-                    onChange={({ target }) => setTel(target?.value)}
+                    onChange={(e) => setTel(e.target?.value)}
                   />
                 </div>
                 <div className="mb-4">
@@ -112,7 +118,7 @@ export default function ContactSection() {
                   </label>
                   <textarea
                     id="message"
-                    className="block w-full bg-gray-100 border-transparent rounded-lg py-3 px-4 placeholder-gray-400 text-gray-900 focus:outline-none focus:bg-white focus:ring-0"
+                    className="w-full text-black bg-white border border-gray-300 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-[#0083CA] focus:border-transparent"
                     placeholder="message..."
                     value={message}
                     onChange={({ target }) => setMessage(target?.value)}

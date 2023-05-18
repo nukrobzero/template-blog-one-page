@@ -19,25 +19,27 @@ export default function HeroSection() {
 
   return (
     <>
-      <section className="bg-indigo-500 h-screen" id="hero">
-        <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8 h-full">
+      <section className="my-48" id="hero">
+        <div className="max-w-7xl mx-auto p-4 h-full">
           <div className="container flex flex-col justify-center items-center h-full md:flex-row">
             <div className="container text-center md:text-center sm: mb-10">
-              <h1 className="text-4xl md:text-6xl">
+              <h1 className="text-4xl md:text-6xl bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text">
                 Good
                 <span
                   id="typed"
-                  className="text-yellow-50 border-gray-50"
+                  className="text-yellow-50 border-gray-50 "
                 ></span>
               </h1>
             </div>
-            <div className="container flex justify-center w-[300px] h-[300px] md:w-[500px] md:h-[500px] lg:w-[500px] lg:h-[400px]">
+            <div className="container flex justify-center ">
               <Image
-                src="https://source.unsplash.com/random"
+                src="https://img.lovepik.com/element/40120/1491.png_860.png"
                 alt="Card"
-                width={1920}
-                height={1080}
-                className="rounded-[50px]"
+                width={300}
+                height={300}
+                layout="responsive"
+                style={{ objectFit: "cover" }}
+                className="rounded-lg !w-[300px] !h-[300px]"
               />
             </div>
           </div>

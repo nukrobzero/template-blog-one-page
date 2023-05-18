@@ -8,7 +8,15 @@ export default function Footer() {
         <div className="mb-4 sm:mb-0">
           <div className="flex items-center">
             <Link href="/" className="text-white font-bold text-xl">
-              Logo
+              <Image
+                src={`https://img.lovepik.com/element/40120/1491.png_860.png`}
+                width={300}
+                height={300}
+                alt="logo"
+                layout="responsive"
+                style={{ objectFit: "cover" }}
+                className="!w-[120px] rounded-full"
+              />
             </Link>
           </div>
         </div>
