@@ -40,7 +40,7 @@ export default function WorkSection() {
                   <li key={repo.id} className="group">
                     <Link href={repo.html_url} target="_blank">
                       <div className="md:h-[400px] bg-white text-black hover:shadow-xl rounded-md">
-                        <figure className="overflow-hidden bg-cover bg-no-repeat">
+                        <figure className="overflow-hidden bg-cover bg-no-repeat rounded-t-md">
                           <Image
                             src="https://source.unsplash.com/random"
                             width={400}
