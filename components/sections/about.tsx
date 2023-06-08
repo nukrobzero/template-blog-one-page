@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function AboutSection() {
   return (
     <>
@@ -19,6 +21,19 @@ export default function AboutSection() {
                 🌱 I’m currently learning Front-End, Back-End, DevOps & more 😍
               </p>
             </div>
+            <span className="flex flex-row space-x-2 pt-8">
+              <h1 className="text-xl text-neutral-200 font-semibold">
+                ติดต่อ - สอบถามได้ที่นี่
+              </h1>
+              <span>
+                <Link
+                  href={`#contact`}
+                  className="text-xl text-neutral-200 bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 bg-[length:0%_3px] bg-no-repeat bg-left-bottom hover:bg-[length:100%_4px] transition-all duration-200 ease-in-out rounded-md"
+                >
+                  Contact
+                </Link>
+              </span>
+            </span>
           </div>
         </div>
       </section>

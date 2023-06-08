@@ -27,6 +27,10 @@ export default function ContactSection() {
       const res = await axios.post(`api/postLineNoti`, formData);
       const resData = res.data;
       setResData(resData);
+      setName("");
+      setEmail("");
+      setTel("");
+      setMessage("");
     } catch (error) {
       console.error(error);
     }
@@ -37,11 +41,11 @@ export default function ContactSection() {
       <section className="my-24" id="contact">
         <div className="max-w-7xl mx-auto p-4 h-full">
           <div className="flex flex-col justify-center max-w-2xl mx-auto m-4">
-            <h1 className="text-4xl text-center font-bold mb-8 md:mb-12 bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text">
-              Contacts
-            </h1>
             {resData !== "" ? (
               <div className="flex flex-col text-center text-white">
+                <h1 className="text-4xl text-center font-bold mb-8 md:mb-12 bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text">
+                  Contacts
+                </h1>
                 <p className=" text-xl font-bold">
                   <span className=" bg-cyan-600 text-white rounded-md p-[2px] mr-2">
                     Thanks for contacting us!
@@ -51,12 +55,21 @@ export default function ContactSection() {
                 <p className="text-xs mt-[10px]">
                   Message will be send to me by Line Notify.
                 </p>
+                <span
+                  onClick={() => setResData("")}
+                  className="font-semibold pt-4 hover:underline hover:text-blue-300 cursor-pointer"
+                >
+                  Return to Form
+                </span>
               </div>
             ) : (
               <form
                 className="bg-gray-50 p-10 rounded-md"
                 onSubmit={handleSubmit}
               >
+                <h1 className="text-4xl text-center font-bold mb-8 md:mb-12 bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text">
+                  Contacts
+                </h1>
                 <div className="mb-4">
                   <label
                     htmlFor="name"
@@ -106,7 +119,9 @@ export default function ContactSection() {
                     placeholder="081-234-5678"
                     required
                     value={tel}
-                    onChange={(e) => setTel(e.target?.value)}
+                    onChange={(e) =>
+                      setTel(e.target?.value.replace(/[^0-9]/g, ""))
+                    }
                   />
                 </div>
                 <div className="mb-4">

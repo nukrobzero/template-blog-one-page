@@ -10,7 +10,7 @@ export default function Skill() {
             <h1 className="text-4xl md:text-6xl text-center mb-16 bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text font-bold">
               Skill
             </h1>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-20 justify-center items-center">
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-x-4 gap-y-20 justify-center items-center">
               <Link
                 href="https://getbootstrap.com"
                 target="_blank"
@@ -24,7 +24,7 @@ export default function Skill() {
                   height="120"
                   layout="responsive"
                   style={{ objectFit: "cover" }}
-                  className="!w-32"
+                  className="!w-20"
                 />
               </Link>
               <Link
@@ -40,7 +40,7 @@ export default function Skill() {
                   height="120"
                   layout="responsive"
                   style={{ objectFit: "cover" }}
-                  className="!w-32"
+                  className="!w-20"
                 />
               </Link>
               <Link
@@ -56,7 +56,7 @@ export default function Skill() {
                   height="120"
                   layout="responsive"
                   style={{ objectFit: "cover" }}
-                  className="!w-32"
+                  className="!w-20"
                 />
               </Link>
               <Link
@@ -72,7 +72,7 @@ export default function Skill() {
                   height="120"
                   layout="responsive"
                   style={{ objectFit: "cover" }}
-                  className="!w-32"
+                  className="!w-20"
                 />
               </Link>
               <Link
@@ -88,7 +88,7 @@ export default function Skill() {
                   height="120"
                   layout="responsive"
                   style={{ objectFit: "cover" }}
-                  className="!w-32"
+                  className="!w-20"
                 />
               </Link>
               <Link
@@ -104,7 +104,7 @@ export default function Skill() {
                   height="120"
                   layout="responsive"
                   style={{ objectFit: "cover" }}
-                  className="!w-32"
+                  className="!w-20"
                 />
               </Link>
               <Link
@@ -120,7 +120,7 @@ export default function Skill() {
                   height="120"
                   layout="responsive"
                   style={{ objectFit: "cover" }}
-                  className="!w-32"
+                  className="!w-20"
                 />
               </Link>
               <Link
@@ -136,7 +136,7 @@ export default function Skill() {
                   height="120"
                   layout="responsive"
                   style={{ objectFit: "cover" }}
-                  className="!w-32"
+                  className="!w-20"
                 />
               </Link>
               <Link
@@ -152,7 +152,7 @@ export default function Skill() {
                   height="120"
                   layout="responsive"
                   style={{ objectFit: "cover" }}
-                  className="!w-32"
+                  className="!w-20"
                 />
               </Link>
               <Link
@@ -168,7 +168,7 @@ export default function Skill() {
                   height="120"
                   layout="responsive"
                   style={{ objectFit: "cover" }}
-                  className="!w-32"
+                  className="!w-20"
                 />
               </Link>
               <Link
@@ -184,7 +184,7 @@ export default function Skill() {
                   height="120"
                   layout="responsive"
                   style={{ objectFit: "cover" }}
-                  className="!w-32"
+                  className="!w-20"
                 />
               </Link>
               <Link
@@ -200,7 +200,7 @@ export default function Skill() {
                   height="120"
                   layout="responsive"
                   style={{ objectFit: "cover" }}
-                  className="!w-32"
+                  className="!w-20"
                 />
               </Link>
               <Link
@@ -216,7 +216,7 @@ export default function Skill() {
                   height="120"
                   layout="responsive"
                   style={{ objectFit: "cover" }}
-                  className="!w-32"
+                  className="!w-20"
                 />
               </Link>
               <Link
@@ -232,7 +232,7 @@ export default function Skill() {
                   height="120"
                   layout="responsive"
                   style={{ objectFit: "cover" }}
-                  className="!w-32"
+                  className="!w-20"
                 />
               </Link>
 
@@ -249,7 +249,7 @@ export default function Skill() {
                   height="120"
                   layout="responsive"
                   style={{ objectFit: "cover" }}
-                  className="!w-32"
+                  className="!w-20"
                 />
               </Link>
               <Link
@@ -265,7 +265,7 @@ export default function Skill() {
                   height="120"
                   layout="responsive"
                   style={{ objectFit: "cover" }}
-                  className="!w-32"
+                  className="!w-20"
                 />
               </Link>
               <Link
@@ -281,7 +281,7 @@ export default function Skill() {
                   height="120"
                   layout="responsive"
                   style={{ objectFit: "cover" }}
-                  className="!w-32"
+                  className="!w-20"
                 />
               </Link>
               <Link
@@ -297,7 +297,7 @@ export default function Skill() {
                   height="120"
                   layout="responsive"
                   style={{ objectFit: "cover" }}
-                  className="!w-32"
+                  className="!w-20"
                 />
               </Link>
               <Link
@@ -313,7 +313,7 @@ export default function Skill() {
                   height="120"
                   layout="responsive"
                   style={{ objectFit: "cover" }}
-                  className="!w-32"
+                  className="!w-20"
                 />
               </Link>
               <Link
@@ -329,7 +329,7 @@ export default function Skill() {
                   height="120"
                   layout="responsive"
                   style={{ objectFit: "cover" }}
-                  className="!w-32"
+                  className="!w-20"
                 />
               </Link>
               <Link
@@ -345,7 +345,7 @@ export default function Skill() {
                   height="120"
                   layout="responsive"
                   style={{ objectFit: "cover" }}
-                  className="!w-32"
+                  className="!w-20"
                 />
               </Link>
               <Link
@@ -361,7 +361,7 @@ export default function Skill() {
                   height="120"
                   layout="responsive"
                   style={{ objectFit: "cover" }}
-                  className="!w-32"
+                  className="!w-20"
                 />
               </Link>
               <Link
@@ -377,7 +377,7 @@ export default function Skill() {
                   height="120"
                   layout="responsive"
                   style={{ objectFit: "cover" }}
-                  className="!w-32"
+                  className="!w-20"
                 />
               </Link>
             </div>

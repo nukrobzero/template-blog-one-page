@@ -33,7 +33,7 @@ export default function HeroSection() {
             </div>
             <div className="container flex justify-center ">
               <Image
-                src="https://img.lovepik.com/element/40120/1491.png_860.png"
+                src="/hero-bg.png"
                 alt="Card"
                 width={300}
                 height={300}

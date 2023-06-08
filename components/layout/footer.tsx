@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="flex items-center">
             <Link href="/" className="text-white font-bold text-xl">
               <Image
-                src={`https://img.lovepik.com/element/40120/1491.png_860.png`}
+                src={`/hero-bg.png`}
                 width={300}
                 height={300}
                 alt="logo"
