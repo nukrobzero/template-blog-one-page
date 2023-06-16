@@ -64,7 +64,7 @@ export default function ContactSection() {
               </div>
             ) : (
               <form
-                className="bg-gray-50 p-10 rounded-md"
+                className="bg-neutral-50 p-10 rounded-md"
                 onSubmit={handleSubmit}
               >
                 <h1 className="text-4xl text-center font-bold mb-8 md:mb-12 bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text">
